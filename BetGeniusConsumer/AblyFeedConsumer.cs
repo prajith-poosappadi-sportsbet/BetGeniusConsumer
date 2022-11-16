@@ -207,14 +207,5 @@ namespace BetGeniusConsumer
                 _logger.StoreLogs($"channel state: {state}, error: {error}");
             });
         }
-
-        private void GetSize<T>(T obj)
-        {
-            if (obj != null)
-            {
-                RuntimeTypeHandle th = obj.GetType().TypeHandle;
-                int size = *(*(int**)&th + 1);
-            }
-        }
     }
 }
